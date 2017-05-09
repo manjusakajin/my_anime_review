@@ -21,3 +21,19 @@
 
 en:
   hello: "Hello world"
+  home:
+    title: "Home"
+    new_anime: "New Anime"
+    new_review: "New Review"
+  help:
+    title: "Help"
+  about:
+    title: "About"
+  contact:
+    title: "Contact"
+  name: "My Anime Review"
+  header:
+    anime_list: "Anime List"
+    review_list: "Review List"
+    sign_up: "Sign Up"
+    log_in: "Log In"
