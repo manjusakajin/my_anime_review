@@ -27,6 +27,7 @@ en:
     new_review: "New Review"
   help:
     title: "Help"
+    welcome: "Welcome to My Anime Review"
   about:
     title: "About"
   contact:
@@ -37,3 +38,5 @@ en:
     review_list: "Review List"
     sign_up: "Sign Up"
     log_in: "Log In"
+  success:
+    welcome: "Welcome to to My Anime Review!"
