@@ -36,5 +36,6 @@ en:
   header:
     anime_list: "Anime List"
     review_list: "Review List"
+    user_list: "User List"
     sign_up: "Sign Up"
     log_in: "Log In"

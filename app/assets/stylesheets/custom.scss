@@ -123,5 +123,12 @@ footer ul li {
 }
 
 header{
-  height : 75px;
+  height : 50px;
+}
+
+.navbar-center
+{
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
 }
