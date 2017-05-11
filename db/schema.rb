@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170511113851) do
+=======
+ActiveRecord::Schema.define(version: 20170510114708) do
+>>>>>>> 13644fa65efda7eae5453104a4a37fa6032e2590
 
   create_table "anime_genres", force: :cascade do |t|
     t.integer  "anime_id"
@@ -24,8 +28,13 @@ ActiveRecord::Schema.define(version: 20170511113851) do
     t.text     "introdution"
     t.float    "web_ratting"
     t.float    "user_ratting"
+<<<<<<< HEAD
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+=======
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+>>>>>>> 13644fa65efda7eae5453104a4a37fa6032e2590
   end
 
   create_table "comments", force: :cascade do |t|
@@ -53,8 +62,13 @@ ActiveRecord::Schema.define(version: 20170511113851) do
   create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
+<<<<<<< HEAD
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+=======
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+>>>>>>> 13644fa65efda7eae5453104a4a37fa6032e2590
     t.index ["followed_id"], name: "index_relationships_on_followed_id"
     t.index ["follower_id", "followed_id"],
       name: "index_relationships_on_follower_id_and_followed_id", unique: true
@@ -76,7 +90,10 @@ ActiveRecord::Schema.define(version: 20170511113851) do
     t.boolean  "is_admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.string   "password_digest"
+=======
+>>>>>>> 13644fa65efda7eae5453104a4a37fa6032e2590
   end
 
 end
