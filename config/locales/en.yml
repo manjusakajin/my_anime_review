@@ -40,3 +40,10 @@ en:
     log_in: "Log In"
   success:
     welcome: "Welcome to to My Anime Review!"
+  danger:
+    notfound: "User not found"
+  error: "error"
+  user:
+    new:
+      comfirm: "Confirmation"
+      create: "Create my account"
