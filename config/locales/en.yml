@@ -39,3 +39,12 @@ en:
     user_list: "User List"
     sign_up: "Sign Up"
     log_in: "Log In"
+  success:
+    welcome: "Welcome to to My Anime Review!"
+  danger:
+    notfound: "User not found"
+  error: "error"
+  user:
+      comfirm: "Confirmation"
+      create: "Create my account"
+  form_contains: "The form contains"
