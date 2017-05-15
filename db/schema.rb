@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170511113851) do
+ActiveRecord::Schema.define(version: 20170515120832) do
 
   create_table "anime_genres", force: :cascade do |t|
     t.integer  "anime_id"
@@ -73,10 +73,13 @@ ActiveRecord::Schema.define(version: 20170511113851) do
     t.string   "email"
     t.datetime "birthday"
     t.boolean  "is_admin"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "remember_digest"
     t.string   "password_digest"
+    t.string   "activation_digest"
+    t.boolean  "is_activated"
+    t.datetime "activated_at"
   end
 
 end

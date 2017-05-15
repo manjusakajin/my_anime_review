@@ -41,9 +41,11 @@ en:
     log_in: "Log In"
   success:
     welcome: "Welcome to to My Anime Review!"
+    activation: "Account activated!"
   danger:
     notfound: "User not found"
     email_password: "Invalid email/password combination"
+    activation: "Invalid activation link"
   error: "error"
   user:
     comfirm: "Confirmation"
@@ -60,3 +62,14 @@ en:
     setting: "Settings"
     logout: "Log out"
     account: "Account"
+  mailer:
+    title: "My Anime Review"
+    greeting: "Hi %{username},"
+    message: "Welcome to the My Anime Review! Click on the link below to activate your account:"
+    activate: "Activate"
+    activation: "Account activation"
+    password_reset: "Password reset"
+  warning:
+    activation: "Account not activated. Check your email for the activation link."
+  info:
+    activation: "Please check your email to activate your account."
