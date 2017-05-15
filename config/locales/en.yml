@@ -43,8 +43,20 @@ en:
     welcome: "Welcome to to My Anime Review!"
   danger:
     notfound: "User not found"
+    email_password: "Invalid email/password combination"
   error: "error"
   user:
-      comfirm: "Confirmation"
-      create: "Create my account"
+    comfirm: "Confirmation"
+    create: "Create my account"
   form_contains: "The form contains"
+  link:
+    sign_up: "Sign up now!"
+    users: "Users"
+  message:
+    new_user: "New user?"
+    remember: "Remember me on this computer"
+  dropdown:
+    profile: "Profile"
+    setting: "Settings"
+    logout: "Log out"
+    account: "Account"

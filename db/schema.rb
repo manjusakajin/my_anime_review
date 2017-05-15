@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20170511113851) do
     t.text     "introdution"
     t.float    "web_ratting"
     t.float    "user_ratting"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "comments", force: :cascade do |t|
@@ -53,11 +53,10 @@ ActiveRecord::Schema.define(version: 20170511113851) do
   create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["followed_id"], name: "index_relationships_on_followed_id"
-    t.index ["follower_id", "followed_id"],
-      name: "index_relationships_on_follower_id_and_followed_id", unique: true
+    t.index ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
     t.index ["follower_id"], name: "index_relationships_on_follower_id"
   end
 
@@ -74,8 +73,9 @@ ActiveRecord::Schema.define(version: 20170511113851) do
     t.string   "email"
     t.datetime "birthday"
     t.boolean  "is_admin"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "remember_digest"
     t.string   "password_digest"
   end
 
