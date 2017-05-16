@@ -1,0 +1,25 @@
+<% provide :title, @anime.name %>
+<div class = "row">
+  <div class = "col-md-12">
+    <h3><%= @anime.name %></h3>
+    <p><%= t "anime.introduce" %><%= @anime.introdution %></p>
+    <p><%= t "anime.web_ratting" %><%= @anime.web_ratting %></p>
+    <% if @anime.user_ratting %>
+      <p><%= t "anime.user_ratting" %><%= @anime.user_ratting %></p>
+    <% end %>
+    <ul class="nav navbar-nav navbar-left">
+      <li><%= link_to t("review.title"), "#" %></li>
+      <li><%= link_to t("rate.title"), "#" %></li>
+    </ul>
+  </div>
+</div>
+<div class = "row">
+  <div class="col-md-12">
+    <% if @anime.reviews.any? %>
+      <h3><%= t "review.title" %> (<%= @anime.reviews.count %>)</h3>
+      <ol class="reviews">
+        <%= render @reviews %>
+      </ol>
+    <% end %>
+  </div>
+</div>

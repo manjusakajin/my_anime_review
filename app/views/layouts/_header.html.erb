@@ -4,9 +4,9 @@
       <%= link_to t("name"), root_path, class: "navbar-brand" %>
     </div>
     <ul class="nav navbar-nav navbar-center">
-      <li><%= link_to t("header.anime_list"), "#" %></li>
+      <li><%= link_to t("header.anime_list"), animes_path %></li>
       <li><%= link_to t("header.review_list"), "#" %></li>
-      <li><%= link_to t("header.user_list"), "#" %></li>
+      <li><%= link_to t("header.user_list"), users_path %></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <% if logged_in? %>
