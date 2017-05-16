@@ -44,8 +44,9 @@ en:
     activation: "Account activated!"
   danger:
     notfound: "User not found"
-    email_password: "Invalid email/password combination"
+    email: "Invalid email/password combination"
     activation: "Invalid activation link"
+    login: "Please log in"
   error: "error"
   user:
     comfirm: "Confirmation"
@@ -73,3 +74,13 @@ en:
     activation: "Account not activated. Check your email for the activation link."
   info:
     activation: "Please check your email to activate your account."
+  review:
+    title: "Review"
+    created_at: "Posted %{time} ago."
+  rate:
+    title: "Rate"
+  anime:
+    introduce: "Introdution :"
+    web_ratting: "Web_ratting :"
+    user_ratting: "User.ratting :"
+    notfound: "Can't find this anime"
