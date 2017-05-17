@@ -1,0 +1,11 @@
+<% @user ||= current_user %>
+<div class="stats">
+  <%= link_to user_relationships_path(@user, page: "following") do %>
+    <span><%= @user.following.count %>
+    <%= t "follow.following" %></span>
+  <% end %>
+  <%= link_to user_relationships_path(@user, page: "followers") do %>
+    <span><%= @user.followers.count %>
+    <%= t "follow.follower" %></span>
+  <% end %>
+</div>

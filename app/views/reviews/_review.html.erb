@@ -4,5 +4,5 @@
 </li>
 <p class="content"><%= review.content.html_safe %></p>
 <p class="timestamp">
-  <%= t("review.created_at", time: time_ago_in_words(review.created_at)) %>
+  <%= t "review.created_at", time: time_ago_in_words(review.created_at) %>
 </p>
