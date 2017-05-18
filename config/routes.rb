@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => "/ckeditor"
   scope "(:locale)", locale: /en|vi/, defaults: {locale: :en} do
     root "my_anime_list#show", page: "home"
     get "my_anime_list/:page", to: "my_anime_list#show"
@@ -7,8 +8,10 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
-    resources :users, only: [:show,:index]
+    resources :users, only: [:show, :index]
     resources :account_activations, only: :edit
-    resources :animes, only: [:show,:index]
+    resources :animes, only: [:show, :index] do
+      resources :reviews, only: [:new, :create]
+    end
   end
 end

@@ -39,6 +39,7 @@ en:
     user_list: "User List"
     sign_up: "Sign Up"
     log_in: "Log In"
+    review: "Review"
   success:
     welcome: "Welcome to to My Anime Review!"
     activation: "Account activated!"
@@ -47,6 +48,7 @@ en:
     email: "Invalid email/password combination"
     activation: "Invalid activation link"
     login: "Please log in"
+    anime: "Anime %{param} not found!"
   error: "error"
   user:
     comfirm: "Confirmation"
@@ -55,6 +57,7 @@ en:
   link:
     sign_up: "Sign up now!"
     users: "Users"
+    create_review: "Create Review"
   message:
     new_user: "New user?"
     remember: "Remember me on this computer"
@@ -77,6 +80,8 @@ en:
   review:
     title: "Review"
     created_at: "Posted %{time} ago."
+    create: "Create Review"
+    created: "Review created!"
   rate:
     title: "Rate"
   anime:

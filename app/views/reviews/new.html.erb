@@ -1,0 +1,12 @@
+<% provide :title, t("header.review") %>
+<h1><%= t "header.review" %></h1>
+<%= render "shared/error_messages", object: @review %>
+<%= form_for [@anime, @review] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, class: "form-control" %>
+
+  <%= f.label :content %>
+  <%= f.cktext_area :content, rows: 10, class: "form-control" %>
+
+  <%= f.submit t("review.create"), class: "btn btn-primary" %>
+<% end %>
