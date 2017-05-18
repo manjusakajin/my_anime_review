@@ -11,7 +11,8 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :index]
     resources :account_activations, only: :edit
     resources :animes, only: [:show, :index] do
-      resources :reviews, only: [:new, :create]
+      resources :reviews, except: [:index, :edit, :update]
     end
+    resources :reviews, only: :index
   end
 end

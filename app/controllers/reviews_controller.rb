@@ -1,6 +1,10 @@
 class ReviewsController < ApplicationController
   before_action :logged_in_user, only: [:new, :create]
-  before_action :find_anime
+  before_action :find_anime, except: [:new, :create, :index]
+
+  def index
+    @reviews = Review.all
+  end
 
   def new
     @review = Review.new
@@ -14,6 +18,14 @@ class ReviewsController < ApplicationController
       redirect_to current_user
     else
       render :new
+    end
+  end
+
+  def show
+    @review = Review.find_by id: params[:id]
+    unless @review
+      flash[:danger] = t "review.not_found"
+      redirect_to root_url
     end
   end
 

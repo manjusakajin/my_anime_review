@@ -3,3 +3,14 @@
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
+
+<div class = "row">
+  <div class="col-md-6">
+    <% if @user.reviews.any? %>
+      <h3><%= t "review.title" %> (<%= @user.reviews.count %>)</h3>
+      <ol class="reviews">
+        <%= render @reviews %>
+      </ol>
+    <% end %>
+  </div>
+</div>

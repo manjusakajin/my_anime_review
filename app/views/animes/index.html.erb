@@ -4,7 +4,6 @@
   <% @animes.each do |anime| %>
     <li>
       <%= link_to anime.name, anime %>
-      <%= link_to t("link.create_review"), new_anime_review_path(anime) %>
     </li>
   <% end %>
 </ul>

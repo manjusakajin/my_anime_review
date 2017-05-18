@@ -1,0 +1,9 @@
+<% provide :title, t("header.review_list") %>
+<h1><%= t "header.review_list" %></h1>
+<ul class="reviews">
+  <% @reviews.each do |review| %>
+    <li>
+      <%= link_to review.title, anime_review_path(review.anime_id, review) %>
+    </li>
+  <% end %>
+</ul>
