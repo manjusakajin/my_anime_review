@@ -5,12 +5,11 @@
     </div>
     <ul class="nav navbar-nav navbar-center">
       <li><%= link_to t("header.anime_list"), animes_path %></li>
-      <li><%= link_to t("header.review_list"), "#" %></li>
+      <li><%= link_to t("header.review_list"), reviews_path %></li>
       <li><%= link_to t("header.user_list"), users_path %></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <% if logged_in? %>
-        <li><%= link_to t("link.users"), "#" %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <%= t "dropdown.account" %> <b class="caret"></b>

@@ -2,7 +2,7 @@
   <%= link_to gravatar_for(review.user), review.user %>
   <span class="user"><%= link_to review.user.name, review.user %></span>
 </li>
-<p class="content"><%= review.content %></p>
+<p class="content"><%= review.content.html_safe %></p>
 <p class="timestamp">
   <%= t("review.created_at", time: time_ago_in_words(review.created_at)) %>
 </p>

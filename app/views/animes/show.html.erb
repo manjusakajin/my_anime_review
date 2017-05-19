@@ -8,7 +8,7 @@
       <p><%= t "anime.user_ratting" %><%= @anime.user_ratting %></p>
     <% end %>
     <ul class="nav navbar-nav navbar-left">
-      <li><%= link_to t("review.title"), "#" %></li>
+      <li><%= link_to t("review.create"), new_anime_review_path(@anime) %></li>
       <li><%= link_to t("rate.title"), "#" %></li>
     </ul>
   </div>

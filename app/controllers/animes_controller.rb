@@ -8,7 +8,7 @@ class AnimesController < ApplicationController
     if @anime
       @reviews = @anime.reviews
     else
-      flash[:danger] = t "anime.notfound"
+      flash[:danger] = t "anime.not_found"
       redirect_to root_url
     end
   end
