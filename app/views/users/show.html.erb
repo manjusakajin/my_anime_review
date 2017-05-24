@@ -1,16 +1,19 @@
 <% provide :title, @user.name %>
 <h1>
-  <%= gravatar_for @user %>
-  <%= @user.name %>
+  <p><%= gravatar_for @user %>
+  <%= @user.name %></p>
 </h1>
-
-<div class = "row">
-  <div class="col-md-6">
+<p> <%= @user.birthday %></p>
+<%= render "follow_form" if logged_in? %>
+<section class="stats">
+  <%= render "shared/stats" %>
+</section>
+<div class="row">
+  <div class="col-md-4">
+    <h3><%= t "review.title" %> (<%= @user.reviews.count %>)</h3>
     <% if @user.reviews.any? %>
-      <h3><%= t "review.title" %> (<%= @user.reviews.count %>)</h3>
       <ol class="reviews">
         <%= render @reviews %>
       </ol>
     <% end %>
-  </div>
 </div>

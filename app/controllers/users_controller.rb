@@ -7,8 +7,19 @@ class UsersController < ApplicationController
   end
 
   def show
-    @reviews = @user.reviews.order(created_at: :desc)
-      .paginate page: params[:page], per_page: Settings.per_page
+    if @user
+      @reviews = @user.reviews.order(created_at: :desc)
+        .paginate page: params[:page], per_page: Settings.per_page
+      @relationship =
+        if current_user.active_relationships.find_by(followed_id: @user.id)
+          current_user.active_relationships.find_by(followed_id: @user.id)
+        else
+          current_user.active_relationships.build
+        end
+    else
+      flash[:danger] = t "danger.not_found"
+      redirect_to root_url
+    end
   end
 
   def new

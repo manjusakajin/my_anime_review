@@ -32,6 +32,7 @@ en:
   user:
     comfirm: "Confirmation"
     create: "Create my account"
+    view_info: "View my Profile"
   form_contains: "The form contains"
   link:
     sign_up: "Sign up now!"
@@ -69,3 +70,8 @@ en:
     web_ratting: "Web_ratting :"
     user_ratting: "User.ratting :"
     not_found: "Can't find this anime"
+  follow:
+    following: "Following"
+    followers: "Followers"
+    title: "Follow"
+    unfollow: "Unfollow"

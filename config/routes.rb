@@ -8,11 +8,14 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
-    resources :users, only: [:show, :index]
+    resources :users, only: [:show, :index] do
+      resources :relationships, only: :index
+    end
     resources :account_activations, only: :edit
     resources :animes, only: [:show, :index] do
       resources :reviews, except: [:index, :edit, :update]
     end
     resources :reviews, only: :index
+    resources :relationships, only: [:create, :destroy ]
   end
 end
