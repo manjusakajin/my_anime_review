@@ -1,0 +1,11 @@
+<% provide :title, @genre.name %>
+<h1><%= @genre.name %></h1>
+<ul class="genres">
+  <% if @anime_genres.any? %>
+    <% @anime_genres.each do |anime_genre| %>
+      <li>
+        <%= link_to anime_genre.anime.name, anime_genre.anime %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
