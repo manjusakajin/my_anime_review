@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :logged_in_user, only: [:new, :create]
-  before_action :find_anime, except: [:new, :create, :index]
+  before_action :find_anime, except: [:index]
 
   def index
     @reviews = Review.all

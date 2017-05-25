@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
     resources :genres, only: [:show, :index]
+    post "/rate", to: "rater#create", as: "rate"
     resources :users, only: [:show, :index] do
       resources :relationships, only: :index
     end

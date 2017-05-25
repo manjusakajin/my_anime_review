@@ -4,9 +4,6 @@
     <h3><%= @anime.name %></h3>
     <p><%= t "anime.introduce" %><%= @anime.introdution %></p>
     <p><%= t "anime.web_ratting" %><%= @anime.web_ratting %></p>
-    <% if @anime.user_ratting %>
-      <p><%= t "anime.user_ratting" %><%= @anime.user_ratting %></p>
-    <% end %>
     <% if @anime.anime_genres.any? %>
       <% @anime.anime_genres.each do |anime_genre| %>
           <span>
@@ -14,9 +11,22 @@
           </span>
       <% end %>
     <% end %>
+    <p><b><%= t "rate.rate_this" %></b></p>
+    <%= t "rate.story" %><%= rating_for @anime, "story", star: 10,
+      cancel: true, disable_after_rate: false %>
+    <%= t "rate.art" %><%= rating_for @anime, "art", star: 10, cancel: true,
+      disable_after_rate: false %>
+    <%= t "rate.sound" %><%= rating_for @anime, "sound", star: 10,
+      cancel: true, disable_after_rate: false %>
+    <%= t "rate.character" %>
+    <%= rating_for @anime, "character", star: 10, cancel: true,
+      disable_after_rate: false %>
+    <%= t "rate.enjoyment" %>
+    <%= rating_for @anime, "enjoyment", star: 10, cancel: true,
+      disable_after_rate: false %>
+    <p><%= t "anime.overall" %><%= @anime.overall_ratings %></p>
     <ul class="nav navbar-nav navbar-left">
       <li><%= link_to t("review.create"), new_anime_review_path(@anime) %></li>
-      <li><%= link_to t("rate.title"), "#" %></li>
     </ul>
   </div>
 </div>

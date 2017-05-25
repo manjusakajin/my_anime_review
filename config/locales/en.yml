@@ -19,6 +19,7 @@ en:
     sign_up: "Sign Up"
     log_in: "Log In"
     review: "Review"
+    rate: "Rate"
   success:
     welcome: "Welcome to to My Anime Review!"
     activation: "Account activated!"
@@ -65,11 +66,18 @@ en:
     not_found: "Can't find this review."
   rate:
     title: "Rate"
+    story: "Story:"
+    art: "Art:"
+    sound: "Sound:"
+    character: "Character:"
+    enjoyment: "Enjoyment:"
+    rate_this: "Rate this anime!"
   anime:
-    introduce: "Introdution :"
-    web_ratting: "Web_ratting :"
-    user_ratting: "User.ratting :"
+    introduce: "Introdution: "
+    web_ratting: "Web Ratting: "
+    user_ratting: "User Ratting: "
     not_found: "Can't find this anime"
+    overall: "Overall: "
   follow:
     following: "Following"
     followers: "Followers"
