@@ -7,6 +7,13 @@
     <% if @anime.user_ratting %>
       <p><%= t "anime.user_ratting" %><%= @anime.user_ratting %></p>
     <% end %>
+    <% if @anime.anime_genres.any? %>
+      <% @anime.anime_genres.each do |anime_genre| %>
+          <span>
+            <%= link_to anime_genre.genre.name, anime_genre.genre %>
+          </span>
+      <% end %>
+    <% end %>
     <ul class="nav navbar-nav navbar-left">
       <li><%= link_to t("review.create"), new_anime_review_path(@anime) %></li>
       <li><%= link_to t("rate.title"), "#" %></li>

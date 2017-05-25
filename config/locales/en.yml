@@ -75,3 +75,6 @@ en:
     followers: "Followers"
     title: "Follow"
     unfollow: "Unfollow"
+  genre:
+    title: "Genres"
+    not_found: "Genre not found"

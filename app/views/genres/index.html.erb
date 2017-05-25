@@ -1,0 +1,9 @@
+<% provide :title, t("genre.title") %>
+<h1><%= t "genre.title" %></h1>
+<ul class="genres">
+  <% @genres.each do |genre| %>
+    <li>
+      <%= link_to genre.name, genre %>
+    </li>
+  <% end %>
+</ul>
