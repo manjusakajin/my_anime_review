@@ -1,0 +1,22 @@
+<% provide :title, t("anime.create") %>
+<h1><%= t "anime.create" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @anime, url: admin_animes_path do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
+
+      <%= f.label :introdution %>
+      <%= f.text_area :introdution, class: "form-control" %>
+
+      <%= f.label :web_ratting %>
+      <%= f.number_field :web_ratting, class: "form-control" %>
+
+      <%= f.collection_check_boxes :genre_ids, @genres, :id, :name %>
+
+      <%= f.submit t("anime.create"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

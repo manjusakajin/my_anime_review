@@ -23,12 +23,14 @@ en:
   success:
     welcome: "Welcome to to My Anime Review!"
     activation: "Account activated!"
+    anime: "Anime created"
   danger:
     not_found: "User not found"
     email: "Invalid email/password combination"
     activation: "Invalid activation link"
     login: "Please log in"
     anime: "Anime %{param} not found!"
+    create_anime: "Just admin can create anime"
   error: "error"
   user:
     comfirm: "Confirmation"
@@ -73,6 +75,7 @@ en:
     enjoyment: "Enjoyment:"
     rate_this: "Rate this anime!"
   anime:
+    create: "Create Anime"
     introduce: "Introdution: "
     web_ratting: "Web Ratting: "
     user_ratting: "User Ratting: "
@@ -86,3 +89,18 @@ en:
   genre:
     title: "Genres"
     not_found: "Genre not found"
+    history: "Historical"
+    action: "Action"
+    shounen: "Shounen"
+    adventure: "Adventure"
+    mecha: "Mecha"
+    SOL: "Slice of Life"
+    comedy: "Comedy"
+    romance: "Romance"
+    sport: "Sports"
+    drama: "Drama"
+    science: "Science Fiction"
+    ecchi: "Ecchi"
+    seinen: "Seinen/Mature"
+    fantasy: "Fantasy"
+    shoujo: "Shoujo"

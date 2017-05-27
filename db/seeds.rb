@@ -5,24 +5,32 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Genre.create(name: "Historical")
-Genre.create(name: "Action")
-Genre.create(name: "Shounen")
-Genre.create(name: "Adventure")
-Genre.create(name: "Mecha")
-Genre.create(name: "Slice of Life")
-Genre.create(name: "Comedy")
-Genre.create(name: "Romance")
-Genre.create(name: "Sports")
-Genre.create(name: "Drama")
-Genre.create(name: "Science Fiction")
-Genre.create(name: "Ecchi")
-Genre.create(name: "Seinen/Mature")
-Genre.create(name: "Fantasy")
-Genre.create(name: "Shoujo")
+Genre.create(name: "Historical", id:7)
+Genre.create(name: "Action", id:1)
+Genre.create(name: "Shounen", id:13)
+Genre.create(name: "Adventure", id:2)
+Genre.create(name: "Mecha", id:8)
+Genre.create(name: "Slice of Life", id:14)
+Genre.create(name: "Comedy", id:3)
+Genre.create(name: "Romance", id:9)
+Genre.create(name: "Sports", id:15)
+Genre.create(name: "Drama", id:4)
+Genre.create(name: "Science Fiction", id:10)
+Genre.create(name: "Ecchi", id:5)
+Genre.create(name: "Seinen/Mature", id:11)
+Genre.create(name: "Fantasy", id:6)
+Genre.create(name: "Shoujo", id:12)
 Anime.create(name: "abc", introdution: "xxxyyyzzz", web_ratting: 3.5)
 AnimeGenre.create(anime_id: 1,genre_id: 2)
 AnimeGenre.create(anime_id: 1,genre_id: 1)
 AnimeGenre.create(anime_id: 1,genre_id: 4)
 AnimeGenre.create(anime_id: 1,genre_id: 5)
+User.create!(name: "HanhTuyen",
+             email: "phamthihanhtuyen@gmail.com",
+             password: "12345678",
+             password_confirmation: "12345678",
+             is_admin: true,
+             is_activated: true,
+             activated_at: Time.zone.now)
+
 
