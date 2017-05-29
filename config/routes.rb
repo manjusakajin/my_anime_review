@@ -17,6 +17,9 @@ Rails.application.routes.draw do
     resources :animes, only: [:show, :index] do
       resources :reviews, except: [:index, :edit, :update]
     end
+    namespace :admin do
+      resources :animes, only: [:new, :create]
+    end
     resources :reviews, only: :index
     resources :relationships, only: [:create, :destroy ]
   end

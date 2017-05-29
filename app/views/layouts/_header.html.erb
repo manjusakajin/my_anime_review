@@ -18,6 +18,9 @@
           <ul class="dropdown-menu">
             <li><%= link_to t("dropdown.profile"), current_user %></li>
             <li><%= link_to t("dropdown.setting"), "#" %></li>
+            <% if current_user.is_admin? %>
+              <li><%= link_to t("anime.create"), new_admin_anime_path %></li>
+            <% end %>
             <li class="divider"></li>
             <li>
               <%= link_to t("dropdown.logout"), logout_path, method: :delete %>
