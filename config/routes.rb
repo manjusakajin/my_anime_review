@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     end
     resources :account_activations, only: :edit
     resources :animes, only: [:show, :index] do
-      resources :reviews, except: [:index, :edit, :update]
+      resources :reviews, except: [:index]
     end
     namespace :admin do
       resources :animes, only: [:new, :create]

@@ -1,9 +1,16 @@
 <% provide :title, @review.title %>
-
-<li id="review-<%= @review.id %>">
+<h2><%= @review.title %></h2>
+<p><%= t "review.for" %><%= @anime.name %></p>
+<% if current_user.created? @review %>
+  <%= link_to t("review.destroy"), anime_review_path, method: :delete,
+    data: {confirm: t("message.confirm")} %>
+  <br>
+  <%= link_to t("review.edit"), edit_anime_review_path(@anime) %>
+<% end %>
+<div id="review-<%= @review.id %>">
   <%= link_to gravatar_for(@review.user), @review.user %>
   <span class="user"><%= link_to @review.user.name, @review.user %></span>
-</li>
+</div>
 <p class="content"><%= @review.content.html_safe %></p>
 <p class="timestamp">
   <%= t "review.created_at", time: time_ago_in_words(@review.created_at) %>

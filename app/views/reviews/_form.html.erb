@@ -1,0 +1,11 @@
+<%= form_for [@anime, @review] do |f| %>
+  <%= render "shared/error_messages", object: @review %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title, class: "form-control" %>
+
+  <%= f.label :content %>
+  <%= f.cktext_area :content, rows: 10, class: "form-control" %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
