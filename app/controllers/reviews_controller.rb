@@ -4,7 +4,8 @@ class ReviewsController < ApplicationController
   before_action :find_review, only: [:edit, :update, :destroy]
 
   def index
-    @reviews = Review.all
+    @reviews = Review.all.paginate page: params[:page],
+      per_page: Settings.per_page
   end
 
   def show

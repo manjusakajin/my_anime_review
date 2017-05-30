@@ -1,7 +1,13 @@
 <% provide :title, @user.name %>
 <h1>
-  <p><%= gravatar_for @user %>
-  <%= @user.name %></p>
+  <p>
+    <% if @user.avatar_file_name %>
+      <%= link_to image_tag(@user.avatar.url(:med)), @user %>
+    <% else %>
+      <%= gravatar_for @user %>
+    <% end %>
+    <%= @user.name %>
+  </p>
 </h1>
 <p> <%= @user.birthday %></p>
 <%= render "follow_form" if logged_in? %>
@@ -15,6 +21,7 @@
       <ol class="reviews">
         <%= render @reviews %>
       </ol>
+      <p><%= will_paginate @reviews %></p>
     <% end %>
   </div>
 </div>

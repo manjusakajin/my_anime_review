@@ -3,7 +3,15 @@
 <ul class="animes">
   <% @animes.each do |anime| %>
     <li>
-      <%= link_to anime.name, anime %>
+      <p>
+        <% if anime.image_file_name %>
+          <%= link_to image_tag(anime.image.url(:med)), anime %>
+        <% else %>
+          <%= gravatar_for anime %>
+        <% end %>
+        <%= link_to anime.name, anime %>
+      </p>
     </li>
   <% end %>
+  <p><%= will_paginate @animes %></p>
 </ul>

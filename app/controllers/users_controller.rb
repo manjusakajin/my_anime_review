@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   before_action :find_user, only: :show
 
   def index
-    @users = User.all
+    @users = User.all.paginate page: params[:page],
+      per_page: Settings.per_page
   end
 
   def show
@@ -11,8 +12,8 @@ class UsersController < ApplicationController
       @reviews = @user.reviews.order(created_at: :desc)
         .paginate page: params[:page], per_page: Settings.per_page
       @relationship =
-        if current_user.active_relationships.find_by(followed_id: @user.id)
-          current_user.active_relationships.find_by(followed_id: @user.id)
+        if current_user.active_relationships.find_by followed_id: @user.id
+          current_user.active_relationships.find_by followed_id: @user.id
         else
           current_user.active_relationships.build
         end
@@ -41,7 +42,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit :name, :email, :password,
-      :password_confirmation
+      :password_confirmation, :avatar
   end
 
   def find_user

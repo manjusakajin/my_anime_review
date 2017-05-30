@@ -2,11 +2,15 @@
 <h1><%= t "anime.create" %></h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for @anime, url: admin_animes_path do |f| %>
+    <%= form_for @anime, url: admin_animes_path,
+      html: {multipart: true} do |f| %>
       <%= render "shared/error_messages", object: f.object %>
 
       <%= f.label :name %>
       <%= f.text_field :name, class: "form-control" %>
+
+      <%= f.label :image %>
+      <%= f.file_field :image %>
 
       <%= f.label :introdution %>
       <%= f.text_area :introdution, class: "form-control" %>
@@ -14,7 +18,14 @@
       <%= f.label :web_ratting %>
       <%= f.number_field :web_ratting, class: "form-control" %>
 
-      <%= f.collection_check_boxes :genre_ids, @genres, :id, :name %>
+      <% if @genres %>
+        <%= f.collection_check_boxes(:genre_ids, @genres, :id, :name)do |id| %>
+          <%= id.label class:"label-checkbox" do%>
+            <%= id.text %>
+            <%= id.check_box %>
+          <%end%>
+        <% end %>
+      <% end %>
 
       <%= f.submit t("anime.create"), class: "btn btn-primary" %>
     <% end %>

@@ -6,8 +6,13 @@ class Anime < ApplicationRecord
   validates :name, presence: true
   validates :introdution, presence: true
   validates :web_ratting, presence: true
+  validates :image, presence: true
+  do_not_validate_attachment_file_type :image
 
   ratyrate_rateable "story", "art", "sound", "character", "enjoyment"
+
+  has_attached_file :image,
+    styles: {small: "50x50", med: "100x100", large: "200x200"}
 
   def overall_ratings
     array = Rate.where rateable_id: id, rateable_type: "Anime"

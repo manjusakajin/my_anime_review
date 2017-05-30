@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170522115343) do
+ActiveRecord::Schema.define(version: 20170530044016) do
 
   create_table "anime_genres", force: :cascade do |t|
     t.integer  "anime_id"
@@ -24,8 +24,12 @@ ActiveRecord::Schema.define(version: 20170522115343) do
     t.text     "introdution"
     t.float    "web_ratting"
     t.float    "user_ratting"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "average_caches", force: :cascade do |t|
@@ -120,13 +124,17 @@ ActiveRecord::Schema.define(version: 20170522115343) do
     t.string   "email"
     t.datetime "birthday"
     t.boolean  "is_admin"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "remember_digest"
     t.string   "password_digest"
     t.string   "activation_digest"
     t.boolean  "is_activated"
     t.datetime "activated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
 end
