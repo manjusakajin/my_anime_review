@@ -31,6 +31,7 @@ en:
     login: "Please log in"
     anime: "Anime %{param} not found!"
     create_anime: "Just admin can create anime"
+    access: "You are not allowed for access"
   error: "error"
   user:
     comfirm: "Confirmation"
@@ -44,6 +45,7 @@ en:
   message:
     new_user: "New user?"
     remember: "Remember me on this computer"
+    confirm: "You sure?"
   dropdown:
     profile: "Profile"
     setting: "Settings"
@@ -66,6 +68,13 @@ en:
     create: "Create Review"
     created: "Review created!"
     not_found: "Can't find this review."
+    edit: "Edit your review"
+    destroy: "Delete your review"
+    deleted: "Review deleted"
+    fobid: "Cant create review for this anime any more"
+    change: "Save change"
+    updated: "Review updated"
+    for: "Review for anime: "
   rate:
     title: "Rate"
     story: "Story:"

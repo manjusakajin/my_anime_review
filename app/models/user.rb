@@ -75,6 +75,14 @@ class User < ApplicationRecord
     self == user
   end
 
+  def reviewed? anime
+    self.reviews.find_by anime_id: anime.id
+  end
+
+  def created? review
+    self.reviews.find_by id: review.id
+  end
+
   private
 
   def downcase_email

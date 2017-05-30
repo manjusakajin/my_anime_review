@@ -1,8 +1,9 @@
 <li id="review-<%= review.id %>">
   <%= link_to gravatar_for(review.user), review.user %>
   <span class="user"><%= link_to review.user.name, review.user %></span>
+  <p><%= link_to review.title, anime_review_path(review.anime_id,
+    review) %></p>
 </li>
-<p class="content"><%= review.content.html_safe %></p>
 <p class="timestamp">
   <%= t "review.created_at", time: time_ago_in_words(review.created_at) %>
 </p>
