@@ -6,4 +6,5 @@
       <%= link_to review.title, anime_review_path(review.anime_id, review) %>
     </li>
   <% end %>
+  <p><%= will_paginate @reviews %></p>
 </ul>

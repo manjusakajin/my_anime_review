@@ -20,7 +20,7 @@ class Admin::AnimesController < ApplicationController
   private
 
   def anime_params
-    params.require(:anime).permit :name, :introdution, :web_ratting,
+    params.require(:anime).permit :name, :introdution, :web_ratting, :image,
       genre_ids: []
   end
 

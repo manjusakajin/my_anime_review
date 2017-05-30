@@ -19,10 +19,14 @@ class User < ApplicationRecord
   validates :email, presence: true, length: {maximum: 255},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :password, presence: true, length: {minimum:6}, allow_blank: true
+  do_not_validate_attachment_file_type :avatar
 
   has_secure_password
 
   ratyrate_rater
+
+  has_attached_file :avatar,
+    styles: {small: "50x50", med: "100x100", large: "200x200"}
 
   class << self
     def digest string
