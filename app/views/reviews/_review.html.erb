@@ -1,8 +1,9 @@
 <li id="review-<%= review.id %>">
   <% if review.user.avatar_file_name %>
-    <%= link_to image_tag(review.user.avatar.url(:med)), review %>
+    <%= link_to image_tag(review.user.avatar.url(:med)),
+      anime_review_path(review.anime_id, review) %>
   <% else %>
-    <%= gravatar_for review.user size: 100 %>
+    <%= gravatar_for review.user, size: 100 %>
   <% end %>
   <span class="title"><%= link_to review.title,
     anime_review_path(review.anime_id, review) %></span>

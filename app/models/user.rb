@@ -26,7 +26,7 @@ class User < ApplicationRecord
   ratyrate_rater
 
   has_attached_file :avatar,
-    styles: {small: "50x50", med: "100x100", large: "200x200"}
+    styles: {small: "50x50#", med: "100x100#", large: "200x200#"}
 
   class << self
     def digest string

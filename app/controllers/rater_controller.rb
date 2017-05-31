@@ -1,5 +1,4 @@
 class RaterController < ApplicationController
-
   def create
     if logged_in?
       obj = params[:klass].classify.constantize.find params[:id]

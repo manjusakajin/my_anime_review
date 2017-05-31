@@ -2,7 +2,7 @@
 <h1><%= @review.title %></h1>
 <div id="review-<%= @review.id %>">
   <% if @review.user.avatar_file_name %>
-    <%= link_to image_tag(@review.user.avatar.url(:med)), @review %>
+    <%= link_to image_tag(@review.user.avatar.url(:med)), anime_review_path %>
   <% else %>
     <%= gravatar_for @review.user, size: 100 %>
   <% end %>
