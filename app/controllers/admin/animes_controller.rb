@@ -1,9 +1,14 @@
 class Admin::AnimesController < ApplicationController
   before_action :check_login
   before_action :check_admin
+  before_action :find_anime, only: [:edit, :update]
 
   def new
     @anime = Anime.new
+    @genres = Genre.all
+  end
+
+  def edit
     @genres = Genre.all
   end
 
@@ -14,6 +19,15 @@ class Admin::AnimesController < ApplicationController
       redirect_to root_url
     else
       render :new
+    end
+  end
+
+  def update
+    if @anime.update_attributes anime_params
+      flash[:success] = t "success.update"
+      redirect_to @anime
+    else
+      render :edit
     end
   end
 
@@ -35,6 +49,14 @@ class Admin::AnimesController < ApplicationController
     unless logged_in?
       flash[:danger] = t "danger.login"
       redirect_to login_path
+    end
+  end
+
+  def find_anime
+    @anime = Anime.find_by id: params[:id]
+    unless @anime
+      flash[:danger] = t "danger.anime"
+      redirect_to root_url
     end
   end
 end

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: :show
-  before_action :find_user, only: :show
+  before_action :logged_in_user, only: [:show, :edit, :update]
+  before_action :find_user, only: [:show, :edit, :update]
+  before_action :correct_user, only: [:edit, :update]
 
   def index
     @users = User.all.paginate page: params[:page],
@@ -27,6 +28,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def edit
+  end
+
   def create
     @user = User.new user_params
     if @user.save
@@ -35,6 +39,15 @@ class UsersController < ApplicationController
       redirect_to root_url
     else
       render :new
+    end
+  end
+
+  def update
+    if @user.update_attributes user_params
+      flash[:success] = t "success.update"
+      redirect_to @user
+    else
+      render :edit
     end
   end
 
@@ -49,6 +62,13 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     unless @user
       flash[:danger] = t "danger.not_found"
+      redirect_to root_url
+    end
+  end
+
+  def correct_user
+    unless current_user.is_user? @user
+      flash[:danger] = t "danger.correct_user"
       redirect_to root_url
     end
   end

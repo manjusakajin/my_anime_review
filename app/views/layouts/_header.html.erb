@@ -17,7 +17,8 @@
           </a>
           <ul class="dropdown-menu">
             <li><%= link_to t("dropdown.profile"), current_user %></li>
-            <li><%= link_to t("dropdown.setting"), "#" %></li>
+            <li><%= link_to t("dropdown.setting"),
+              edit_user_path(id: current_user.id) %></li>
             <% if current_user.is_admin? %>
               <li><%= link_to t("anime.create"), new_admin_anime_path %></li>
             <% end %>

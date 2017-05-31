@@ -20,11 +20,6 @@ Genre.create(name: "Ecchi", id:5)
 Genre.create(name: "Seinen/Mature", id:11)
 Genre.create(name: "Fantasy", id:6)
 Genre.create(name: "Shoujo", id:12)
-Anime.create(name: "abc", introdution: "xxxyyyzzz", web_ratting: 3.5)
-AnimeGenre.create(anime_id: 1,genre_id: 2)
-AnimeGenre.create(anime_id: 1,genre_id: 1)
-AnimeGenre.create(anime_id: 1,genre_id: 4)
-AnimeGenre.create(anime_id: 1,genre_id: 5)
 User.create!(name: "HanhTuyen",
              email: "phamthihanhtuyen@gmail.com",
              password: "12345678",
