@@ -4,7 +4,15 @@
   <% if @anime_genres.any? %>
     <% @anime_genres.each do |anime_genre| %>
       <li>
-        <%= link_to anime_genre.anime.name, anime_genre.anime %>
+        <p>
+          <% if anime_genre.anime.image_file_name %>
+            <%= link_to image_tag(anime_genre.anime.image.url(:med)),
+              anime_genre.anime %>
+          <% else %>
+            <%= gravatar_for anime_genre.anime, size: 100 %>
+          <% end %>
+          <%= link_to anime_genre.anime.name, anime_genre.anime %>
+        </p>
       </li>
     <% end %>
   <% end %>
