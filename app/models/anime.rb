@@ -12,7 +12,7 @@ class Anime < ApplicationRecord
   ratyrate_rateable "story", "art", "sound", "character", "enjoyment"
 
   has_attached_file :image,
-    styles: {small: "50x50", med: "100x100", large: "200x200"}
+    styles: {small: "50x50", med: "100x100", large: "300x300"}
 
   def overall_ratings
     array = Rate.where rateable_id: id, rateable_type: "Anime"

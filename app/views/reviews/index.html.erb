@@ -3,14 +3,14 @@
 <ul class="reviews">
   <% @reviews.each do |review| %>
     <li>
-      <span>
+      <p>
         <% if review.user.avatar_file_name %>
           <%= link_to image_tag(review.user.avatar.url(:med)), @review %>
         <% else %>
           <%= gravatar_for review.user, size: 100 %>
         <% end %>
         <%= link_to review.title, anime_review_path(review.anime_id, review) %>
-      </span>
+      </p>
     </li>
   <% end %>
   <p><%= will_paginate @reviews %></p>
