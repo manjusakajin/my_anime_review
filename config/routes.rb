@@ -18,9 +18,10 @@ Rails.application.routes.draw do
       resources :reviews, except: [:index]
     end
     namespace :admin do
-      resources :animes, only: [:new, :create]
+      resources :animes, expect: [:index, :show, :destroy]
     end
     resources :reviews, only: :index
     resources :relationships, only: [:create, :destroy ]
+    resources :users, only: [:edit, :update]
   end
 end

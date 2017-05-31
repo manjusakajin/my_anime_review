@@ -24,6 +24,7 @@ en:
     welcome: "Welcome to to My Anime Review!"
     activation: "Account activated!"
     anime: "Anime created"
+    update: "Updated"
   danger:
     not_found: "User not found"
     email: "Invalid email/password combination"
@@ -37,6 +38,8 @@ en:
     comfirm: "Confirmation"
     create: "Create my account"
     view_info: "View my Profile"
+    edit: "Edit"
+    update: "Update"
   form_contains: "The form contains"
   link:
     sign_up: "Sign up now!"
@@ -90,6 +93,7 @@ en:
     user_ratting: "User Ratting: "
     not_found: "Can't find this anime"
     overall: "Overall: "
+    update: "Anime Update"
   follow:
     following: "Following"
     followers: "Followers"
