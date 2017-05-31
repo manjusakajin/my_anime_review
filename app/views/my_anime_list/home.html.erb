@@ -6,7 +6,7 @@
       <% if anime.image_file_name %>
         <%= link_to image_tag(anime.image.url(:large)), anime %>
       <% else %>
-        <%= gravatar_for anime, size: 150 %>
+        <%= gravatar_for anime, size: 200 %>
       <% end %>
       <p><%= link_to anime.name, anime %></p>
     </div>
@@ -20,7 +20,7 @@
         <%= link_to image_tag(review.user.avatar.url(:large)),
           anime_review_path(anime_id: review.anime.id, id: review.id) %>
       <% else %>
-        <%= gravatar_for review.user, size: 150 %>
+        <%= gravatar_for review.user, size: 200 %>
       <% end %>
       <p><%= link_to review.title,
         anime_review_path(anime_id: review.anime.id, id: review.id) %></p>
