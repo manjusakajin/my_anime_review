@@ -6,7 +6,10 @@ en:
     new_review: "New Review"
   help:
     title: "Help"
+<<<<<<< HEAD
     welcome: "Welcome to My Anime Review"
+=======
+>>>>>>> c087136a15fe64c84334a981f191c6c5671d5198
   about:
     title: "About"
   contact:
@@ -15,6 +18,7 @@ en:
   header:
     anime_list: "Anime List"
     review_list: "Review List"
+<<<<<<< HEAD
     user_list: "User List"
     sign_up: "Sign Up"
     log_in: "Log In"
@@ -117,3 +121,7 @@ en:
     seinen: "Seinen/Mature"
     fantasy: "Fantasy"
     shoujo: "Shoujo"
+=======
+    sign_up: "Sign Up"
+    log_in: "Log In"
+>>>>>>> c087136a15fe64c84334a981f191c6c5671d5198
