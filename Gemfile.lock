@@ -194,13 +194,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-<<<<<<< HEAD
   bcrypt (= 3.1.11)
   bootstrap-sass (= 3.3.6)
   bootstrap-will_paginate (= 0.0.10)
-=======
-  bootstrap-sass (= 3.3.6)
->>>>>>> c087136a15fe64c84334a981f191c6c5671d5198
   byebug
   ckeditor
   coffee-rails (~> 4.2)

@@ -1,9 +1,29 @@
 <% provide :title, t("home.title") %>
 <div class="row">
-  <div class="col-md-6">
-    <h1><%= t "home.new_anime" %></h1>
-  </div>
-  <div class="col-md-6">
-    <h1><%= t "home.new_review" %></h1>
-  </div>
+  <h1><%= t "home.new_anime" %></h1>
+  <% @animes.each do |anime| %>
+    <div class="col-md-3">
+      <% if anime.image_file_name %>
+        <%= link_to image_tag(anime.image.url(:large)), anime %>
+      <% else %>
+        <%= gravatar_for anime, size: 200 %>
+      <% end %>
+      <p><%= link_to anime.name, anime %></p>
+    </div>
+  <% end %>
+</div>
+<div class="row">
+  <h1><%= t "home.new_review" %></h1>
+  <% @reviews.each do |review| %>
+    <div class="col-md-3">
+      <% if review.user.avatar_file_name %>
+        <%= link_to image_tag(review.user.avatar.url(:large)),
+          anime_review_path(anime_id: review.anime.id, id: review.id) %>
+      <% else %>
+        <%= gravatar_for review.user, size: 200 %>
+      <% end %>
+      <p><%= link_to review.title,
+        anime_review_path(anime_id: review.anime.id, id: review.id) %></p>
+    </div>
+  <% end %>
 </div>
